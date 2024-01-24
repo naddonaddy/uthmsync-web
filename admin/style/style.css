@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #246ee9;
+}
+
+.material-icons-hamburger {
+    color: black;
+}
+
+*,
+*::before,
+*::after {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+button,
+input[type="button"],
+input[type="submit"] {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    border-color: #246ee9;
+}
+
+.form-container {
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-top: -50px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-button {
+    width: 150px;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+/*login*/
+
+/* dashboard */
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    /* Adjust the width of the sidebar as needed */
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    /* Add a smooth transition effect for width changes */
+    padding-top: 50px;
+}
+
+.collapsed {
+    width: 60px;
+    /* Set the collapsed width of the sidebar */
+}
+
+.main-content {
+    flex-grow: 1;
+    transition: margin-left 0.5s;
+    margin-left: 250px;
+    margin-right: 25px;
+    /* Add a smooth transition effect for margin changes */
+}
+
+.sidebar.active {
+    width: 60px;
+    /* Adjust the width when the sidebar is collapsed */
+}
+
+.main-content.expanded {
+    margin-left: 100px;
+    /* Adjust the margin when sidebar is expanded */
+}
+
+.sidebar .menu-item a {
+    display: block;
+    color: #212529;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar .menu-item a:hover {
+    background-color: #246ee9;
+}
+
+.sidebar.active .menu-item a {
+    display: none;
+}
+
+.sidebar.active .menu-item:hover a {
+    display: block;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #246ee9;
+    font-size: 24px;
+    margin-left: 20px;
+    background-color: #f8f9fa;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    /* Adjust margin as needed */
+}
+
+.card {
+    flex: 1;
+    padding: 30px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    /* Adjust margin between cards as needed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add these styles for the card content */
+.card-title {
+    font-weight: bold;
+}
+
+.card-content {
+    font-size: 24px;
+    text-align: right;
+}
+
+.chart-card {
+    flex: 1;
+    padding: 30px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bar-chart,
+.pie-chart {
+    height: 100px;
+    background-color: #f0f0f0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .chart-card {
+        flex: 1 1 100%;
+        /* Full width for smaller screens */
+        margin-right: 0;
+    }
+}
+
+/* dashboard */
+
+/*profile*/
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add styles for the avatar container */
+.avatar-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Add these styles for the Save button */
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    /* Set the width to auto */
+    display: inline-block;
+    margin-left: 50%;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Add styles for the Confirm Password div */
+#confirmPasswordDiv {
+    display: none;
+}
+
+/* Add these styles for the read-only input fields */
+input[readonly] {
+    background-color: #f0f0f09f;
+    /* Light gray background color */
+    border: 1px solid #ccc;
+    /* Light gray border */
+    pointer-events: none;
+}
+
+/*profile*/
+
+/*manage admin*/
+
+/* Add styles for the search bar and search button */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Add styles for the card container */
+.admin-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Adjust styles for the card to create three columns */
+.admin-card {
+    flex: 0 1 calc(33.33% - 100px);
+    /* Adjust the width for three columns with margins */
+    margin: 0 10px 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 30%;
+}
+
+.admin-card-details {
+    flex: 1;
+}
+
+.admin-card-details h3 {
+    margin-bottom: 5px;
+}
+
+/* Add styles for the buttons in the card */
+.admin-card-buttons {
+    display: flex;
+}
+
+.admin-card-buttons button {
+    margin-left: 10%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add styles for the admin card buttons */
+.admin-card-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-card-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Make Admin button styles */
+.admin-card-buttons button.make-admin {
+    background-color: #ffc107;
+    /* Yellow */
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.admin-card-buttons button.make-admin:hover {
+    background-color: #ffca2b;
+    /* Darker yellow on hover */
+}
+
+/* Delete button styles */
+.admin-card-buttons button.delete {
+    background-color: #dc3545;
+    /* Red */
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.admin-card-buttons button.delete:hover {
+    background-color: #c82333;
+    /* Darker red on hover */
+}
+
+
+/*manage admin*/
+
+/*user activities overview*/
+/* Add this to your existing CSS or create a new CSS file */
+
+/* Style for the User Activities Table */
+.user-activities-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for Table Headers */
+.user-activities-table th {
+    background-color: #f2f2f27e;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Style for Table Cells */
+.user-activities-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Style for alternating row colors */
+.user-activities-table tbody tr:nth-child(even) {
+    background-color: #f9f9f94d;
+}
+
+/*user activities overview*/
+
+/*manage report*/
+.generate-report-button {
+    background-color: #4caf50 !important;
+    /* Green by default */
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 15px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.generate-report-button:hover {
+    background-color: #45a049 !important;
+    /* Darker green on hover */
+}
+
+
+/*manage report*/
